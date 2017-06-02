@@ -1,0 +1,24 @@
+apply plugin: 'application'
+
+mainClassName = 'jp.toastkid.clipboard.Main'
+
+sourceCompatibility = 1.8
+
+version = '1.0'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Clipboard API sample', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'io.reactivex.rxjava2:rxjavafx:2.1.0'
+}
